@@ -1,57 +1,56 @@
 const database = require("./database");
 
-const users = [
+const users = 
     [
         {
           "id": 1,
-          "title": "Citizen Kane",
-          "director": "Orson Wells",
-          "year": "1941",
-          "color": "0",
-          "duration": 120
+          "firstname": "John",
+          "lastname": "Doe",
+          "email": "john.doe@example.com",
+          "city": "Paris",
+          "language": "English"
         },
         {
           "id": 2,
-          "title": "The Godfather",
-          "director": "Francis Ford Coppola",
-          "year": "1972",
-          "color": "1",
-          "duration": 180
+          "firstname": "Valeriy",
+          "lastname": "Appius",
+          "email": "valeriy.appius@example.com",
+          "city": "Moscow",
+          "language": "Russian"
         },
         {
           "id": 3,
-          "title": "Pulp Fiction",
-          "director": "Quentin Tarantino",
-          "year": "1994",
-          "color": "1",
-          "duration": 180
+          "firstname": "Ralf",
+          "lastname": "Geronimo",
+          "email": "ralf.geronimo@example.com",
+          "city": "New York",
+          "language": "Italian"
         },
         {
           "id": 4,
-          "title": "Apocalypse Now",
-          "director": "Francis Ford Coppola",
-          "year": "1979",
-          "color": "1",
-          "duration": 150
+          "firstname": "Maria",
+          "lastname": "Iskandar",
+          "email": "maria.iskandar@example.com",
+          "city": "New York",
+          "language": "German"
         },
         {
           "id": 5,
-          "title": "2001 a space odyssey",
-          "director": "Stanley Kubrick",
-          "year": "1968",
-          "color": "1",
-          "duration": 160
+          "firstname": "Jane",
+          "lastname": "Doe",
+          "email": "jane.doe@example.com",
+          "city": "London",
+          "language": "English"
         },
         {
           "id": 6,
-          "title": "The Dark Knight",
-          "director": "Christopher Nolan",
-          "year": "2008",
-          "color": "1",
-          "duration": 150
+          "firstname": "Johanna",
+          "lastname": "Martino",
+          "email": "johanna.martino@example.com",
+          "city": "Milan",
+          "language": "Spanish"
         }
       ]
-]
 
 
 

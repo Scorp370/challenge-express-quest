@@ -55,16 +55,38 @@ const users =
 
 
 const getUsers = (req, res) => {
+    let user = "select * from users";
+    const userName = [];
+
+    if (req.query.language != null) {
+        user += " where language = ?";
+        userName.push(req.query.language);
+
+  
+        
+
+     if (req.query.city != null) {
+        user += " and city = ?";
+        userName.push(req.query.city);
+}
+
+     } else if (req.query.city != null) {
+        user += " where city = ?";
+        userName.push(req.query.city);
+    };
+    
   database
-    .query("select * from users")
+    .query(user, userName)
     .then(([users]) => {
       res.json(users);
     })
     .catch((err) => {
       console.error(err);
-      res.status(500).send("Error retrieving data from database");
+      res.status(500).send("Error getting the users");
     });
 };
+
+
 
 const getUsersById = (req, res) => {
   const id = parseInt(req.params.id);

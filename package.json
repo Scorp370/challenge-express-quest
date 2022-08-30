@@ -22,8 +22,11 @@
   "dependencies": {
     "dotenv": "^16.0.1",
     "express": "^4.18.1",
+<<<<<<< HEAD
     "express-validator": "^6.14.2",
     "joi": "^17.6.0",
+=======
+>>>>>>> beafddcfceee71433da66fbd7797b55c2e004a02
     "mysql2": "^2.3.3"
   },
   "devDependencies": {

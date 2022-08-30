@@ -1,6 +1,9 @@
 const database = require("./database");
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> beafddcfceee71433da66fbd7797b55c2e004a02
 const users = 
     [
         {

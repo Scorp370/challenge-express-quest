@@ -1,9 +1,6 @@
 const database = require("./database");
 
-<<<<<<< HEAD
 
-=======
->>>>>>> beafddcfceee71433da66fbd7797b55c2e004a02
 const users = 
     [
         {
@@ -59,7 +56,7 @@ const users =
 
 
 const getUsers = (req, res) => {
-    let user = "select * from users";
+    let user = "select id, firstname, lastname, email, city, language from users";
     const userName = [];
 
     if (req.query.language != null) {
@@ -111,12 +108,12 @@ const getUsersById = (req, res) => {
 };
 
 const postUsers = (req, res) => {
-    const { firstname, lastname, email, city, language } = req.body;
+    const { firstname, lastname, email, city, language, hashedPassword } = req.body;
 
   database
     .query(
-      "INSERT INTO users(firstname, lastname, email, city, language) VALUES (?, ?, ?, ?, ?)",
-      [firstname, lastname, email, city, language]
+      "INSERT INTO users(firstname, lastname, email, city, language, hashedPassword) VALUES (?, ?, ?, ?, ?, ?)",
+      [firstname, lastname, email, city, language, hashedPassword]
     )
     .then(([result]) => {
       res.location(`/api/users/${result.insertId}`).sendStatus(201);
